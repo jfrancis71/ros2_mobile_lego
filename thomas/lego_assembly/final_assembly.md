@@ -4,9 +4,6 @@
 <img src="../images/final_assembly/step_2.jpg" width=300>
 <img src="../images/final_assembly/step_3.jpg" width=300>
 <img src="../images/final_assembly/step_4.jpg" width=300>
-
-In the below picture, the 2 yellow triple pins half inserted are not part of the model. I have placed them here to indicate where the blue pins in the above picture should be inserted.
-
 <img src="../images/final_assembly/step_5.jpg" width=300>
 <img src="../images/final_assembly/step_6.jpg" width=300>
 <img src="../images/final_assembly/step_7.jpg" width=300>
