@@ -7,9 +7,9 @@
 <img src="../images/final_assembly/step_5.jpg" width=300>
 <img src="../images/final_assembly/step_6.jpg" width=300>
 <img src="../images/final_assembly/step_7.jpg" width=300>
-
-Time to wire up...
-The Terry configuration files assume the following wiring: going clockwise, viewed from above starting at front: PORT_D, PORT_A, PORT_B
-
 <img src="../images/final_assembly/step_8.jpg" width=300>
 <img src="../images/final_assembly/step_9.jpg" width=300>
+
+
+Time to wire up...
+Left wheel goes to PORT A, right wheel to PORT_D.
