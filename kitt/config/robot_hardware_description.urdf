@@ -37,13 +37,13 @@
     </joint>
     <joint name="PORT_B">
       <command_interface name="position"/>
-      <param name="gear_ratio">1.0</param>
-      <param name="hw_min_position_limit">-75.0</param>
-      <param name="hw_max_position_limit">75.0</param>
+      <param name="gear_ratio">-0.625</param>
+      <param name="hw_min_position_limit">-70.0</param>
+      <param name="hw_max_position_limit">70.0</param>
       <param name="hw_position_zero_start_power">20.0</param>
       <param name="hw_position_zero_start_wait_time">100.0</param>
       <param name="hw_position_zero_stall_dps_threshold">30.0</param>
-      <param name="hw_position_zero_relative">-120.0</param>
+      <param name="hw_position_zero_relative">-100.0</param>
       <param name="hw_position_zero_relative_wait_time">3000.0</param>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
