@@ -37,7 +37,7 @@
     </joint>
     <joint name="PORT_B">
       <command_interface name="position"/>
-      <param name="gear_ratio">0.625</param>
+      <param name="gear_ratio">0.40</param>
       <param name="hw_min_position_limit">-70.0</param>
       <param name="hw_max_position_limit">70.0</param>
       <param name="hw_position_zero_start_power">40.0</param>
