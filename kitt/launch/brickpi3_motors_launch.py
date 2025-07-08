@@ -26,7 +26,7 @@ def generate_launch_description():
         arguments=[
             "tricycle_steering_controller",
             "--controller-ros-args",
-            "-r /tricycle_steering_controller/reference:=/cmd_vel",
+            "-r /tricycle_steering_controller/reference:=/cmd_vel -r /tricycle_steering_controller/odometry:=/odom",
         ],
     )
 
