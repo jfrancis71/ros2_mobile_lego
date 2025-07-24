@@ -12,13 +12,14 @@ controller_manager:
 tricycle_steering_controller:
   ros__parameters:
     wheel_track: 0.1
-    wheelbase: 0.165
+    wheelbase: 0.192
     front_wheels_radius: 0.018
     rear_wheels_radius: 0.018
     front_steering: true
     reference_timeout: 2.0
-    rear_wheels_names: ['PORT_D', 'PORT_A']
-    front_wheels_names: ['PORT_B']
+    rear_wheels_names: ['left_traction_wheel', 'right_traction_wheel']  # ROS2 Control Controllers documentation
+# implies reverse order, but this order has correct behaviour.
+    front_wheels_names: ['steer_axis']
     open_loop: false
     velocity_rolling_window_size: 10
     base_frame_id: base_link

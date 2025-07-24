@@ -4,47 +4,37 @@
   <link name="base_link"></link>
   <link name="left_wheel"></link>
   <link name="right_wheel"></link>
-  <link name="steering_wheel"></link>
-  <joint name="PORT_A" type="continuous">
+  <link name="steer_axis"></link>
+  <joint name="left_traction_wheel" type="continuous">
     <parent link="base_link"/>
     <child link="left_wheel"/>
   </joint>
-  <joint name="PORT_D" type="continuous">
+  <joint name="right_traction_wheel" type="continuous">
     <parent link="base_link"/>
     <child link="right_wheel"/>
   </joint>
-  <joint name="PORT_B" type="continuous">
+  <joint name="steer_axis" type="continuous">
     <parent link="base_link"/>
-    <child link="steering_wheel"/>
+    <child link="steer_axis"/>
   </joint>
-  <ros2_control name="BrickPi3" type="system">
+  <ros2_control name="KittHardware" type="system">
     <hardware>
-      <plugin>brickpi3_motors/BrickPi3MotorsHardware</plugin>
+      <plugin>kitt_hardware/KittHardware</plugin>
       <param name="hw_start_duration_sec">0</param>
       <param name="hw_stop_duration_sec">3.0</param>
     </hardware>
-    <joint name="PORT_A">
+    <joint name="left_traction_wheel">
       <command_interface name="velocity"/>
-      <param name="gear_ratio">-1.0</param>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
     </joint>
-    <joint name="PORT_D">
+    <joint name="right_traction_wheel">
       <command_interface name="velocity"/>
-      <param name="gear_ratio">-1.0</param>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
     </joint>
-    <joint name="PORT_B">
+    <joint name="steer_axis">
       <command_interface name="position"/>
-      <param name="gear_ratio">0.40</param>
-      <param name="hw_min_position_limit">-85.0</param>
-      <param name="hw_max_position_limit">85.0</param>
-      <param name="hw_position_zero_start_power">40.0</param>
-      <param name="hw_position_zero_start_wait_time">100.0</param>
-      <param name="hw_position_zero_stall_dps_threshold">30.0</param>
-      <param name="hw_position_zero_relative">-100.0</param>
-      <param name="hw_position_zero_relative_wait_time">3000.0</param>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
     </joint>
