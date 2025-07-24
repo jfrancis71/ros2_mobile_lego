@@ -1,0 +1,8 @@
+<library path="alfie_hardware">
+  <class name="alfie_hardware/AlfieHardware"
+         type="alfie_hardware::AlfieHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>Alfie Hardware interface to Dexter Industries BrickPi3.
+    </description>
+  </class>
+</library>
