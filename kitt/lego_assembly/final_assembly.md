@@ -1,5 +1,7 @@
 # Final Assembly Instructions
 
+The steering mechanism below was inspired by YouTube: Bricks Master Builders (retrieved 22/07/2025), LEGO Technic Simple Rack & Pinion Steering Module: https://www.youtube.com/watch?v=olrBk-QonG8
+
 <img src="../images/final_assembly/step_1.jpg" width=300>
 <img src="../images/final_assembly/step_2.jpg" width=300>
 <img src="../images/final_assembly/step_3.jpg" width=300>
