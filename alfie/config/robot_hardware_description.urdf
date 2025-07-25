@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!-- ROS2 Control Hardware Plugin for Alfie -->
+<robot name="alfie">
+  <link name="base_link"></link>
+  <link name="traction_wheel"></link>
+  <link name="steer_axis"></link>
+  <joint name="traction_wheel" type="continuous">
+    <parent link="base_link"/>
+    <child link="traction_wheel"/>
+  </joint>
+  <joint name="steer_axis" type="continuous">
+    <parent link="base_link"/>
+    <child link="steer_axis"/>
+  </joint>
+  <ros2_control name="Alfie" type="system">
+    <hardware>
+      <plugin>alfie_hardware/AlfieHardware</plugin>
+      <param name="hw_start_duration_sec">0</param>
+      <param name="hw_stop_duration_sec">3.0</param>
+    </hardware>
+    <joint name="traction_wheel">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="steer_axis">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+</robot>

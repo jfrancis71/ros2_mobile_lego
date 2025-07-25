@@ -1,0 +1,18 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 10  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    bicycle_steering_controller:
+      type: bicycle_steering_controller/BicycleSteeringController
+
+
+bicycle_steering_controller:
+  ros__parameters:
+    rear_wheels_names: ["traction_wheel"]
+    front_wheels_names: ["steer_axis"]
+    front_wheel_radius: .0815
+    rear_wheel_radius: .0815
+    wheelbase: .24  # 30 studs long
