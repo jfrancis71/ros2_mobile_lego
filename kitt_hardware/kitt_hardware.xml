@@ -1,0 +1,8 @@
+<library path="kitt_hardware">
+  <class name="kitt_hardware/KittHardware"
+         type="kitt_hardware::KittHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>Kitt Hardware interface to Dexter Industries BrickPi3.
+    </description>
+  </class>
+</library>
