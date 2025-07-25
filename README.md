@@ -9,6 +9,9 @@ This repository does not really contain any software as such (apart from configu
 |Name|As seen on YouTube|That's Me|
 |------------------|----|----|
 [Thomas](./thomas/README.md)|<a href="https://youtu.be/mzJLYzwhiqo"><img src="https://img.youtube.com/vi/mzJLYzwhiqo/0.jpg" height=320></a>|<img src=./thomas/images/final_assembly/step_10.jpg height=320>|
+[Kitt](./kitt/README.md)||<img src=./kitt/images/final_assembly/step_11.jpg height=200>|
+[Alfie](./alfie/README.md)||<img src=./alfie/images/final_assembly/step_7.jpg height=320>|
+
 
 
 ### Tested Hardware
