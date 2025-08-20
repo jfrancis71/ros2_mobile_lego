@@ -26,7 +26,7 @@ def generate_launch_description():
         arguments=[
             "differential_drive_controller",
             "--controller-ros-args",
-            "-r /differential_drive_controller/cmd_vel:=/cmd_vel",
+            "-r /differential_drive_controller/cmd_vel:=/cmd_vel -r /differential_drive_controller/odom:=/odom",
         ],
     )
 
