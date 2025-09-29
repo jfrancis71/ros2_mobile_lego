@@ -12,7 +12,7 @@ def generate_launch_description():
         ])
 
     robot_controllers = PathJoinSubstitution(
-            [FindPackageShare("kitt"), "config", "robot_description.yaml"])
+            [FindPackageShare("kitt"), "config", "controller_description.yaml"])
 
     control_node = Node(
         package="controller_manager",
