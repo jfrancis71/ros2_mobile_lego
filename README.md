@@ -63,7 +63,7 @@ source ./install/setup.bash
 
 Activate the motor controller (replacing PACKAGE_NAME with your robot, eg thomas):
 ```
-ros2 launch PACKAGE_NAME brickpi3_motors_launch.py
+ros2 launch PACKAGE_NAME motors_launch.py
 ```
 
 Note this command blocks the terminal, so for subsequent commands you will need another terminal.
