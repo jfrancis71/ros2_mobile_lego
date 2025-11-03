@@ -3,10 +3,11 @@
 <package format="3">
   <name>thomas</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Thomas - The Lego Robot Tank</description>
   <maintainer email="julian.w.francis@gmail.com">julian</maintainer>
-  <license>TODO: License declaration</license>
+  <license>MIT</license>
 
+  <build_depend>brickpi3_motors</build_depend>
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
