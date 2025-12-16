@@ -11,8 +11,8 @@ controller_manager:
 
 bicycle_steering_controller:
   ros__parameters:
-    rear_wheels_names: ["traction_wheel"]
-    front_wheels_names: ["steer_axis"]
-    front_wheel_radius: .0815
-    rear_wheel_radius: .0815
+    traction_joints_names: ["traction_wheel"]
+    steering_joints_names: ["steer_axis"]
+    traction_wheel_radius: .0815
+    traction_wheel_radius: .0815
     wheelbase: .24  # 30 studs long
