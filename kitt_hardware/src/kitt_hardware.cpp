@@ -169,9 +169,9 @@ hardware_interface::return_type KittHardware::read(
   hw_left_traction_position_ = position_A/traction_gear_ratio;
   hw_right_traction_position_ = position_D/traction_gear_ratio;
 
-  double actuator_position = -motor_position_degrees_B*(2.0*MATH_PI/360.0);
+  double actuator_position = motor_position_degrees_B*(2.0*MATH_PI/360.0);
   hw_steer_axis_position_ = asin(actuator_position * (rack_tooth_spacing * num_pinion_teeth) / (2*MATH_PI*pivot_seperation));
-  double actuator_position_vel_rads = -motor_dps_B*(2.0*MATH_PI/360.0);
+  double actuator_position_vel_rads = motor_dps_B*(2.0*MATH_PI/360.0);
   hw_steer_axis_vel_ = actuator_position_vel_rads * (rack_tooth_spacing * num_pinion_teeth) / (2*MATH_PI*pivot_seperation);
 
   return hardware_interface::return_type::OK;
