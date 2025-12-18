@@ -11,20 +11,18 @@ controller_manager:
 
 tricycle_steering_controller:
   ros__parameters:
-    traction_track_width: 0.1
+    traction_track_width: 0.135
     wheelbase: 0.192
-    traction_wheels_radius: 0.018
-    traction_wheels_radius: 0.018
+    traction_wheels_radius: 0.0215
     front_steering: true
     reference_timeout: 2.0
-    traction_joints_names: ['left_traction_wheel', 'right_traction_wheel']  # ROS2 Control Controllers documentation
-# implies reverse order, but this order has correct behaviour.
+    traction_joints_names: ['right_traction_wheel', 'left_traction_wheel']
     steering_joints_names: ['steer_axis']
     open_loop: false
     velocity_rolling_window_size: 10
     base_frame_id: base_link
     odom_frame_id: odom
     enable_odom_tf: true
-    twist_covariance_diagonal: [0.0, 7.0, 14.0, 21.0, 28.0, 35.0]
-    pose_covariance_diagonal: [0.0, 7.0, 14.0, 21.0, 28.0, 35.0]
+    twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+    pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
     position_feedback: false
