@@ -27,46 +27,26 @@ Ubuntu 22.04, ROS2 Jazzy (RoboStack), BrickPi3
 
 All these robots are based on BrickPi3 hardware so: follow instructions to build ROS2 BrickPi3 at (https://github.com/jfrancis71/ros2_brickpi3)
 
-If environment not activated (eg you have logged in again since performing above step), ensure environment is activated:
-
-```mamba activate ros2```
-
-
 ```
-cd ~/ros2_ws
-git -C src clone https://github.com/jfrancis71/ros2_mobile_lego.git
+git clone -b microservices https://github.com/jfrancis71/ros2_mobile_lego.git
 ```
 
-For all robots:
+e.g. to build Thomas: (otherwise replace with kitt/alfie)
 ```
-colcon build --symlink-install
+docker build -t thomas ./ros2_mobile_lego/docker/thomas
 ```
+
 
 ### Troubleshooting
 
-I recommend having a seperate shell running htop so you can monitor progress. The Raspberry Pi 3B+ is quite memory limited which can cause problems installing some packages, particularly the omni_wheel_controller in the last step above. If you see process status 'D' in htop relating to the install processes that persists this can indicate difficulties due to low memory. In this case I suggest before running the colcon build step (the final step in the instructions), adding:
-
-```
-export MAKEFLAGS="-j 1" # recommended to reduce memory usage.
-```
-
-Also I suggest adding some temporary swap (I found 2GB perfectly sufficient). See discussion from Digital Ocean in the References section. Don't forget to remove the swap after a succesful installation. (A swap file on an SD card will reduce card life significantly)
+I suggest adding some temporary swap (I found 2GB perfectly sufficient). See discussion from Digital Ocean in the References section. Don't forget to remove the swap after a succesful installation. (A swap file on an SD card will reduce card life significantly)
 
 
 ## Verify Install
 
-To reinitialize environment:
 ```
-source ./install/setup.bash
+docker run -it --rm --network=host --ipc=host --device=/dev/spidev0.1 thomas
 ```
-
-
-Activate the motor controller (replacing PACKAGE_NAME with your robot, eg thomas):
-```
-ros2 launch PACKAGE_NAME motors_launch.py
-```
-
-Note this command blocks the terminal, so for subsequent commands you will need another terminal.
 
 This should cause the motors to rotate (briefly):
 ```
