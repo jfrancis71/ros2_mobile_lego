@@ -28,7 +28,7 @@ Ubuntu 22.04, ROS2 Jazzy (RoboStack), BrickPi3
 All these robots are based on BrickPi3 hardware so: follow instructions to build ROS2 BrickPi3 at (https://github.com/jfrancis71/ros2_brickpi3)
 
 ```
-git clone -b microservices https://github.com/jfrancis71/ros2_mobile_lego.git
+git clone https://github.com/jfrancis71/ros2_mobile_lego.git
 ```
 
 e.g. to build Thomas: (otherwise replace with kitt/alfie)
